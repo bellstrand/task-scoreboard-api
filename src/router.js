@@ -10,7 +10,7 @@ export default function() {
 
 	api.use('/api/', login());
 
-	api.use('/api/users', admin, users());
+	api.use('/api/users', users());
 	api.use('/api/tasks', auth, tasks());
 
 	api.get('/api', (req, res) => {

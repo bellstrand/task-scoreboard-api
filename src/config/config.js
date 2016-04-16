@@ -1,7 +1,9 @@
+let argv = require('yargs').argv;
+
 export default {
 	port: 8000,
 
-	mongodb: 'mongodb://localhost:27017/task-scoreboard',
+	mongodb: 'mongodb://' + (argv.db || 'localhost') + ':27017/task-scoreboard',
 
 	session: {
 		name: 'task-scoreboard-api-session',
